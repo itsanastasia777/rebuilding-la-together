@@ -1,29 +1,71 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background for a gaming vibe */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center all content */
 }
 
+/* Header Styles */
 h1 {
-    background-color: #ff6f61;
+    background-color: #ff5722; /* Bright orange for emphasis */
     color: white;
-    padding: 10px;
+    padding: 20px;
+    margin: 0;
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
 }
 
+/* Paragraph Styles */
+p {
+    margin: 20px auto;
+    max-width: 600px;
+    color: #b0b0b0;
+    font-size: 1.2em;
+}
+
+/* Button Styles for Categories */
 ul {
     list-style: none;
     padding: 0;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 ul li {
-    margin: 10px 0;
+    margin: 0;
 }
 
-a {
+ul li a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
     text-decoration: none;
-    color: #ff6f61;
+    background-color: #2196f3; /* Bright blue */
+    border: 3px solid #1e88e5;
+    border-radius: 15px;
+    box-shadow: 0 5px #1e88e5, 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Hover Effect */
+ul li a:hover {
+    background-color: #1e88e5; /* Slightly darker blue */
+    transform: translateY(-3px); /* Move button up slightly */
+    box-shadow: 0 8px #1565c0, 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Active/Pressed Effect */
+ul li a:active {
+    transform: translateY(3px); /* Move button down slightly */
+    box-shadow: 0 3px #1565c0, 0 5px 10px rgba(0, 0, 0, 0.5);
 }
