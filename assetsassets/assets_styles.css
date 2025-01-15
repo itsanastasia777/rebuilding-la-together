@@ -3,16 +3,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom, #fceabb, #f8b500); /* Soft sandy gradient */
+    background: url('assetsassets/firevolunteers.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333333;
     text-align: center;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Add a dark overlay for better readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for readability */
+    z-index: -1;
+}
+
 /* Header */
 header {
     padding: 50px 20px;
-    background-color: #f8b500;
+    background-color: rgba(255, 140, 0, 0.9);
     color: #ffffff;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -83,42 +96,3 @@ footer {
     border-radius: 10px 10px 0 0;
     animation: fadeIn 2s ease-in-out;
 }
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromTop {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-}
-
-
