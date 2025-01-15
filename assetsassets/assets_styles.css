@@ -94,4 +94,43 @@ footer {
     border-radius: 10px 10px 0 0;
     font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+/* Updates Section */
+#updates {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
 }
+
+#updates h2, #updates h3 {
+    color: #ff5722;
+    text-align: center;
+}
+
+#notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+#notifications li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+#notifications a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+#notifications a:hover {
+    text-decoration: underline;
+}
+
+#map iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
