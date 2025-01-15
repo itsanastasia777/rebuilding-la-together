@@ -1,136 +1,85 @@
-/* General Styles */
+/* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #e0e0e0;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
     text-align: center;
-    background-image: url('assets/images/fire_volunteers.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Fixed during scrolling */
+    background: url('assets/images/fire_relief_background.jpg') no-repeat center center fixed; /* Add your background image */
+    background-size: cover;
 }
 
-/* Overlay Effect for Better Text Visibility */
+/* Add a semi-transparent overlay */
 body::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
     z-index: -1;
 }
 
-/* Header Styles */
-h1 {
-    background-color: rgba(255, 87, 34, 0.8); /* Semi-transparent orange */
-    color: white;
-    padding: 20px;
-    margin: 0;
-    border-radius: 0 0 15px 15px;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+/* Header Styling */
+header {
+    padding: 50px 20px;
+    background-color: rgba(255, 87, 34, 0.8); /* Semi-transparent orange header */
+    border-radius: 0 0 20px 20px;
 }
 
-/* Paragraph Styles */
-p {
-    margin: 20px auto;
-    max-width: 600px;
-    color: #f0f0f0;
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
     font-size: 1.2em;
+    margin-top: 10px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Button Styles */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 50px auto;
+/* Navigation Buttons */
+.buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin: 40px 0;
 }
 
-ul li {
-    margin: 0;
-}
-
-ul li a {
+.btn {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.2em;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
-    background-color: #2196f3;
-    border: 3px solid #1e88e5;
-    border-radius: 15px;
-    box-shadow: 0 5px #1e88e5, 0 10px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    background: #ff5722; /* Bright orange */
+    border: 2px solid #e64a19;
+    border-radius: 10px;
+    box-shadow: 0 5px #e64a19, 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-ul li a:hover {
-    background-color: #1e88e5;
+.btn:hover {
+    background: #e64a19;
     transform: translateY(-3px);
-    box-shadow: 0 8px #1565c0, 0 15px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px #bf360c, 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 
-ul li a:active {
+.btn:active {
     transform: translateY(3px);
-    box-shadow: 0 3px #1565c0, 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px #bf360c, 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Styles */
+/* Footer Styling */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 10px;
-    background-color: rgba(33, 150, 243, 0.8);
-    color: white;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 20px;
     border-radius: 10px 10px 0 0;
     font-size: 0.9em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-/* Updates Section */
-#updates {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    text-align: left;
-}
-
-#updates h2, #updates h3 {
-    color: #ff5722;
-    text-align: center;
-}
-
-#notifications ul {
-    list-style: none;
-    padding: 0;
-}
-
-#notifications li {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-#notifications a {
-    color: #1e88e5;
-    text-decoration: none;
-}
-
-#notifications a:hover {
-    text-decoration: underline;
-}
-
-#map iframe {
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
 }
 
