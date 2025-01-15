@@ -2,34 +2,26 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #fceabb, #f8b500); /* Soft sandy gradient */
+    color: #333333;
     text-align: center;
-    background: url('assets/images/fire_relief_background.jpg') no-repeat center center fixed; /* Add your background image */
-    background-size: cover;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Add a semi-transparent overlay */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-    z-index: -1;
-}
-
-/* Header Styling */
+/* Header */
 header {
     padding: 50px 20px;
-    background-color: rgba(255, 87, 34, 0.8); /* Semi-transparent orange header */
+    background-color: #f8b500;
+    color: #ffffff;
     border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+    font-weight: 800;
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -37,10 +29,18 @@ header h1 {
 header p {
     font-size: 1.2em;
     margin-top: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* Navigation Buttons */
+/* Navigation Section */
+#navigation h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 20px 0;
+    color: #bf360c;
+    animation: slideInFromTop 1.5s ease;
+}
+
+/* Buttons */
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -53,33 +53,72 @@ header p {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    background: #ff5722; /* Bright orange */
-    border: 2px solid #e64a19;
-    border-radius: 10px;
-    box-shadow: 0 5px #e64a19, 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: #f57c00; /* Earthy orange */
+    border: 2px solid #e65100;
+    border-radius: 8px;
+    box-shadow: 0 5px #e65100, 0 10px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e64a19;
-    transform: translateY(-3px);
+    background: #e65100;
+    transform: scale(1.05);
     box-shadow: 0 8px #bf360c, 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
-    transform: translateY(3px);
+    transform: translateY(2px);
     box-shadow: 0 3px #bf360c, 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
-    background: rgba(33, 150, 243, 0.9);
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
-    font-size: 0.9em;
+    background: #bf360c;
     color: #ffffff;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 10px 10px 0 0;
+    animation: fadeIn 2s ease-in-out;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
 
