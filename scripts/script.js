@@ -37,31 +37,30 @@ const resources = {
     ],
 };
 
-// Function to dynamically display links for a selected category
+// Function to dynamically display resources for a selected category
 function showLinks(category) {
+    const container = document.getElementById("response-buttons");
+    container.innerHTML = ""; // Clear previous buttons
+
     // Validate category
     if (!resources[category]) {
-        console.error("Invalid category:", category);
+        container.innerHTML = "<p>No resources available for this category.</p>";
         return;
     }
 
-    // Get the container where the links will be displayed
-    const container = document.getElementById("response-buttons");
-    container.innerHTML = ""; // Clear any previously displayed links
-
-    // Loop through the resources for the selected category and create buttons
+    // Generate resource buttons
     resources[category].forEach((resource) => {
         const button = document.createElement("a");
         button.href = resource.link;
-        button.target = "_blank"; // Open link in a new tab
-        button.className = "btn"; // Apply button styling
+        button.target = "_blank";
+        button.className = "btn";
         button.textContent = resource.text;
         container.appendChild(button);
     });
 
-    // Scroll to the section with the dynamically generated buttons
+    // Scroll to the section with dynamically generated buttons
     document.getElementById("dynamic-links").scrollIntoView({ behavior: "smooth" });
 }
 
-// Log a message to confirm the JavaScript file is loaded
+// Confirm the JavaScript file is loaded
 console.log("JavaScript loaded successfully!");
