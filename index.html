@@ -4,54 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>United for LA Relief</title>
-    <!-- Link to Montserrat Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- Link to CSS -->
     <link rel="stylesheet" href="assetsassets/assets_styles.css">
-    <!-- Link to JavaScript -->
     <script defer src="scripts/script.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#navigation">Home</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="hero">
+    <header>
         <h1>United for LA Relief</h1>
         <p>Your trusted platform for wildfire relief, resources, and updates.</p>
-        <a href="#navigation" class="hero-btn">Explore Resources</a>
     </header>
 
-    <!-- Navigation Buttons -->
-    <main>
-        <section id="navigation">
-            <h2>How Can We Help You?</h2>
-            <div class="buttons">
-                <button class="btn" onclick="showLinks('victim')">I am a Victim</button>
-                <button class="btn" onclick="showLinks('volunteerLocal')">Volunteer Locally</button>
-                <button class="btn" onclick="showLinks('volunteerRemote')">Volunteer Remotely</button>
-                <button class="btn" onclick="showLinks('donate')">Make a Donation</button>
-                <button class="btn" onclick="showLinks('petition')">File a Petition</button>
-                <button class="btn" onclick="showLinks('supportGroups')">Find Support Groups</button>
-                <button class="btn" onclick="showLinks('updates')">Latest Updates</button>
-            </div>
-        </section>
+    <!-- Buttons for selecting a category -->
+    <section id="navigation">
+        <h2>How Can We Help You?</h2>
+        <div class="buttons">
+            <button class="btn" onclick="showLinks('victim')">I am a Victim</button>
+            <button class="btn" onclick="showLinks('volunteerLocal')">Volunteer Locally</button>
+            <button class="btn" onclick="showLinks('volunteerRemote')">Volunteer Remotely</button>
+            <button class="btn" onclick="showLinks('donate')">Make a Donation</button>
+            <button class="btn" onclick="showLinks('petition')">File a Petition</button>
+            <button class="btn" onclick="showLinks('supportGroups')">Find Support Groups</button>
+            <button class="btn" onclick="showLinks('updates')">Latest Updates</button>
+        </div>
+    </section>
 
-        <!-- Dynamic Section for Links -->
-        <section id="dynamic-links">
-            <h2>Available Resources</h2>
-            <div id="response-buttons" class="buttons">
-                <!-- Dynamic Buttons will be inserted here by JavaScript -->
-            </div>
-        </section>
+    <!-- Section for dynamically displaying resources -->
+    <section id="dynamic-links">
+        <h2>Available Resources</h2>
+        <div id="response-buttons" class="buttons">
+            <!-- Dynamically generated buttons will appear here -->
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or need more information? Feel free to r
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 United for LA Relief. Together, we rebuild stronger.</p>
+    </footer>
+</body>
+</html>
+
 
