@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('assetsassets/firevolunteers.jpg') no-repeat center center/cover;
+    background: #f4b393; /* Temporary pastel color for testing */
     color: #333333;
     text-align: center;
     overflow-x: hidden;
