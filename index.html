@@ -6,8 +6,9 @@
     <title>United for LA Relief</title>
     <!-- Link to Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- Link to CSS with cache busting -->
-    <link rel="stylesheet" href="assetsassets/assets_styles.css?ver=3">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assetsassets/assets_styles.css">
+    <script defer src="assetsassets/script.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -30,13 +31,21 @@
         <section id="navigation">
             <h2>How Can We Help You?</h2>
             <div class="buttons">
-                <a href="victim.html" class="btn">I am a Victim</a>
-                <a href="volunteer_local.html" class="btn">Volunteer Locally</a>
-                <a href="volunteer_remote.html" class="btn">Volunteer Remotely</a>
-                <a href="donate.html" class="btn">Make a Donation</a>
-                <a href="petition.html" class="btn">File a Petition</a>
-                <a href="support_groups.html" class="btn">Find Support Groups</a>
-                <a href="updates.html" class="btn">Latest Updates</a>
+                <button class="btn" onclick="showLinks('victim')">I am a Victim</button>
+                <button class="btn" onclick="showLinks('volunteerLocal')">Volunteer Locally</button>
+                <button class="btn" onclick="showLinks('volunteerRemote')">Volunteer Remotely</button>
+                <button class="btn" onclick="showLinks('donate')">Make a Donation</button>
+                <button class="btn" onclick="showLinks('petition')">File a Petition</button>
+                <button class="btn" onclick="showLinks('supportGroups')">Find Support Groups</button>
+                <button class="btn" onclick="showLinks('updates')">Latest Updates</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Section for Links -->
+        <section id="dynamic-links">
+            <h2>Available Resources</h2>
+            <div id="response-buttons" class="buttons">
+                <!-- Dynamic Buttons will be inserted here by JavaScript -->
             </div>
         </section>
 
