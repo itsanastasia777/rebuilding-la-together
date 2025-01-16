@@ -1,23 +1,41 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #fdf5e6;
+    background: url('./assetsassets/firevolunteers.jpg') no-repeat center center/cover;
+    color: white;
+    overflow-x: hidden;
 }
 
+/* Header Styles */
 header {
-    background: #f4a582;
+    background: rgba(0, 0, 50, 0.8); /* Navy blue with transparency */
     color: white;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
+    margin: 0;
 }
 
 header p {
     font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation Buttons Section */
+#navigation {
+    margin: 40px auto;
+}
+
+#navigation h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .buttons {
@@ -31,28 +49,43 @@ header p {
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background: #88d8b0;
+    font-size: 1em;
+    font-weight: bold;
+    background: rgba(0, 0, 50, 0.9); /* Navy blue */
     color: white;
     text-decoration: none;
-    font-size: 1em;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: #66cdaa;
+    background: rgba(0, 0, 80, 1); /* Slightly lighter navy */
+    transform: translateY(-3px);
 }
 
+/* Dynamic Links Section */
 #dynamic-links {
-    margin: 40px auto;
+    background: rgba(0, 0, 50, 0.8); /* Navy blue with transparency */
     padding: 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-footer {
-    background: #f4a582;
+#dynamic-links h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
     color: white;
-    padding: 10px;
 }
 
-
+/* Footer Styles */
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
