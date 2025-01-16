@@ -3,57 +3,92 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('assetsassets/firevolunteers.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #ffffff;
     color: #333333;
     text-align: center;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Add a dark overlay for better readability */
-body::before {
-    content: '';
-    position: absolute;
+/* Navigation Bar */
+nav {
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for readability */
-    z-index: -1;
+    background: rgba(255, 223, 186, 0.9); /* Soft pastel peach */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-/* Header */
-header {
-    padding: 50px 20px;
-    background-color: rgba(255, 140, 0, 0.9);
-    color: #ffffff;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-header h1 {
-    font-size: 3.5em;
-    font-weight: 800;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
     margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: #f57c00;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('assetsassets/fire_volunteers.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
+#hero h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin: 0;
 }
 
-/* Navigation Section */
+#hero p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-decoration: none;
+    background: #f4b393;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #f69a8e;
+}
+
+/* Navigation Buttons Section */
 #navigation h2 {
     font-size: 2.5em;
     font-weight: 600;
     margin: 20px 0;
-    color: #bf360c;
-    animation: slideInFromTop 1.5s ease;
+    color: #88d8b0;
 }
 
-/* Buttons */
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -69,30 +104,79 @@ header p {
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    background: #f57c00; /* Earthy orange */
-    border: 2px solid #e65100;
+    background: #f4b393;
+    border: 2px solid #f4a582;
     border-radius: 8px;
-    box-shadow: 0 5px #e65100, 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px #f4a582, 0 10px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #e65100;
+    background: #f69a8e;
     transform: scale(1.05);
-    box-shadow: 0 8px #bf360c, 0 15px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px #e6876e, 0 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn:active {
     transform: translateY(2px);
-    box-shadow: 0 3px #bf360c, 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px #e6876e, 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section */
+#contact {
+    background: rgba(255, 255, 255, 0.8); /* Soft white background for contrast */
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#contact h2 {
+    color: #88d8b0;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #555555;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#contact a {
+    color: #f57c00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background: #bf360c;
+    background: #f4a582;
     color: #ffffff;
     padding: 15px;
     font-size: 1em;
     border-radius: 10px 10px 0 0;
-    animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
 }
